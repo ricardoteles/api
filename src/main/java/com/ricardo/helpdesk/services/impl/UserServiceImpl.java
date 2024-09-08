@@ -34,4 +34,11 @@ public class UserServiceImpl implements UserService {
     public List<UsuarioDTO> findAll() {
         return repo.findAll().stream().map(x -> mapper.map(x, UsuarioDTO.class)).collect(Collectors.toList());
     }
+
+    public UsuarioDTO create(UsuarioDTO obj) {
+        Usuario novoUsuario = mapper.map(obj, Usuario.class);
+        UsuarioDTO novoUsuarioDto = mapper.map(repo.save(novoUsuario), UsuarioDTO.class);
+
+        return novoUsuarioDto;
+    }
 }
