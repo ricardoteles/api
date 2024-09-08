@@ -32,4 +32,10 @@ public class UsuarioResource {
                     .buildAndExpand(service.create(obj).getId()).toUri();
         return ResponseEntity.created(uri).build();
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<UsuarioDTO> update( @PathVariable Integer id, @RequestBody UsuarioDTO obj){
+        obj.setId(id);
+        return ResponseEntity.ok().body(service.update(obj));
+    }
 }
