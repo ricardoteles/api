@@ -1,7 +1,7 @@
 package com.ricardo.helpdesk.services.impl;
 
-import com.ricardo.helpdesk.domain.User;
-import com.ricardo.helpdesk.repositories.UserRepository;
+import com.ricardo.helpdesk.domain.Usuario;
+import com.ricardo.helpdesk.repositories.UsuarioRepository;
 import com.ricardo.helpdesk.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,9 +10,9 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl implements UserService {
 
     @Autowired
-    private UserRepository repo;
+    private UsuarioRepository repo;
 
-    public User findById(Integer id) {
+    public Usuario findById(Integer id) {
         return repo.findById(id).orElse(null);
     }
 }

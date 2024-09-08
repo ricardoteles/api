@@ -1,6 +1,6 @@
 package com.ricardo.helpdesk.resources;
 
-import com.ricardo.helpdesk.domain.User;
+import com.ricardo.helpdesk.domain.Usuario;
 import com.ricardo.helpdesk.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/users")
-public class UserResource {
+public class UsuarioResource {
     @Autowired
     private UserService service;
 
     @GetMapping("/{id}")
-    public ResponseEntity<User> findById(@PathVariable Integer id){
+    public ResponseEntity<Usuario> findById(@PathVariable Integer id){
         return ResponseEntity.ok().body(service.findById(id));
     }
 }
