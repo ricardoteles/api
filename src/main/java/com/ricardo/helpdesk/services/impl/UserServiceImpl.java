@@ -50,6 +50,11 @@ public class UserServiceImpl implements UserService {
         return mapper.map(repo.save(novoUsuario), UsuarioDTO.class);
     }
 
+    public void delete(Integer id) {
+        findById(id);
+        repo.deleteById(id);
+    }
+
     private void findByEmail(UsuarioDTO obj) {
         Optional<Usuario> usuario = repo.findByEmail(obj.getEmail());
 

@@ -34,8 +34,14 @@ public class UsuarioResource {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<UsuarioDTO> update( @PathVariable Integer id, @RequestBody UsuarioDTO obj){
+    public ResponseEntity<UsuarioDTO> update(@PathVariable Integer id, @RequestBody UsuarioDTO obj){
         obj.setId(id);
         return ResponseEntity.ok().body(service.update(obj));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> delete(@PathVariable Integer id){
+        service.delete(id);
+        return ResponseEntity.noContent().build();
     }
 }
