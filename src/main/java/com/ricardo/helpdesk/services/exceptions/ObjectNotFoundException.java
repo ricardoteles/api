@@ -1,4 +1,4 @@
-package com.ricardo.helpdesk.services.exceptions;
+package com.ricardo.api.services.exceptions;
 
 public class ObjectNotFoundException extends RuntimeException {
     public ObjectNotFoundException(String message) {

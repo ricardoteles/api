@@ -1,4 +1,4 @@
-package com.ricardo.helpdesk.domain.dto;
+package com.ricardo.api.domain.dto;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;

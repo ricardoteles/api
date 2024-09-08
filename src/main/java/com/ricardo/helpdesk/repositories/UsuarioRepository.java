@@ -1,6 +1,6 @@
-package com.ricardo.helpdesk.repositories;
+package com.ricardo.api.repositories;
 
-import com.ricardo.helpdesk.domain.Usuario;
+import com.ricardo.api.domain.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

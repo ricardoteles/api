@@ -1,11 +1,11 @@
-package com.ricardo.helpdesk.services.impl;
+package com.ricardo.api.services.impl;
 
-import com.ricardo.helpdesk.domain.Usuario;
-import com.ricardo.helpdesk.domain.dto.UsuarioDTO;
-import com.ricardo.helpdesk.repositories.UsuarioRepository;
-import com.ricardo.helpdesk.services.UserService;
-import com.ricardo.helpdesk.services.exceptions.DataIntegratyViolationException;
-import com.ricardo.helpdesk.services.exceptions.ObjectNotFoundException;
+import com.ricardo.api.domain.Usuario;
+import com.ricardo.api.domain.dto.UsuarioDTO;
+import com.ricardo.api.repositories.UsuarioRepository;
+import com.ricardo.api.services.UserService;
+import com.ricardo.api.services.exceptions.DataIntegratyViolationException;
+import com.ricardo.api.services.exceptions.ObjectNotFoundException;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

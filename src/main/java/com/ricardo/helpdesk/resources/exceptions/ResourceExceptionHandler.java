@@ -1,7 +1,7 @@
-package com.ricardo.helpdesk.resources.exceptions;
+package com.ricardo.api.resources.exceptions;
 
-import com.ricardo.helpdesk.services.exceptions.DataIntegratyViolationException;
-import com.ricardo.helpdesk.services.exceptions.ObjectNotFoundException;
+import com.ricardo.api.services.exceptions.DataIntegratyViolationException;
+import com.ricardo.api.services.exceptions.ObjectNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

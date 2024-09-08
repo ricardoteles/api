@@ -1,6 +1,6 @@
-package com.ricardo.helpdesk.services;
+package com.ricardo.api.services;
 
-import com.ricardo.helpdesk.domain.dto.UsuarioDTO;
+import com.ricardo.api.domain.dto.UsuarioDTO;
 
 import java.util.List;
 

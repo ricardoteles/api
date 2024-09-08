@@ -1,4 +1,4 @@
-package com.ricardo.helpdesk.domain;
+package com.ricardo.api.domain;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

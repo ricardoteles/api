@@ -1,10 +1,10 @@
-package com.ricardo.helpdesk;
+package com.ricardo.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class HelpdeskApplicationTests {
+class ApiApplicationTests {
 
 	@Test
 	void contextLoads() {

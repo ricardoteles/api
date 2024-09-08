@@ -1,4 +1,4 @@
-package com.ricardo.helpdesk.services.exceptions;
+package com.ricardo.api.services.exceptions;
 
 public class DataIntegratyViolationException extends RuntimeException {
     public DataIntegratyViolationException(String message) {

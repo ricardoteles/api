@@ -1,4 +1,4 @@
-package com.ricardo.helpdesk.config;
+package com.ricardo.api.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

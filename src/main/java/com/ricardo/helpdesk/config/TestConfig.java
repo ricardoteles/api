@@ -1,7 +1,7 @@
-package com.ricardo.helpdesk.config;
+package com.ricardo.api.config;
 
-import com.ricardo.helpdesk.domain.Usuario;
-import com.ricardo.helpdesk.repositories.UsuarioRepository;
+import com.ricardo.api.domain.Usuario;
+import com.ricardo.api.repositories.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

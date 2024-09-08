@@ -1,4 +1,4 @@
-package com.ricardo.helpdesk.resources.exceptions;
+package com.ricardo.api.resources.exceptions;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

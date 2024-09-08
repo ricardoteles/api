@@ -1,7 +1,7 @@
-package com.ricardo.helpdesk.resources;
+package com.ricardo.api.resources;
 
-import com.ricardo.helpdesk.domain.dto.UsuarioDTO;
-import com.ricardo.helpdesk.services.UserService;
+import com.ricardo.api.domain.dto.UsuarioDTO;
+import com.ricardo.api.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
