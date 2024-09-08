@@ -1,7 +1,7 @@
 package com.ricardo.helpdesk.services;
 
-import com.ricardo.helpdesk.domain.Usuario;
+import com.ricardo.helpdesk.domain.dto.UsuarioDTO;
 
 public interface UserService {
-    Usuario findById(Integer id);
+    UsuarioDTO findById(Integer id);
 }

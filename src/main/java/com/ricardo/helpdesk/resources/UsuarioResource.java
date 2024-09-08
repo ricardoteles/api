@@ -1,6 +1,6 @@
 package com.ricardo.helpdesk.resources;
 
-import com.ricardo.helpdesk.domain.Usuario;
+import com.ricardo.helpdesk.domain.dto.UsuarioDTO;
 import com.ricardo.helpdesk.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +16,7 @@ public class UsuarioResource {
     private UserService service;
 
     @GetMapping("/{id}")
-    public ResponseEntity<Usuario> findById(@PathVariable Integer id){
+    public ResponseEntity<UsuarioDTO> findById(@PathVariable Integer id){
         return ResponseEntity.ok().body(service.findById(id));
     }
 }
