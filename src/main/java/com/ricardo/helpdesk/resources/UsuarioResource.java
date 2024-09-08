@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/users")
 public class UsuarioResource {
@@ -18,5 +20,10 @@ public class UsuarioResource {
     @GetMapping("/{id}")
     public ResponseEntity<UsuarioDTO> findById(@PathVariable Integer id){
         return ResponseEntity.ok().body(service.findById(id));
+    }
+
+    @GetMapping
+    public ResponseEntity<List<UsuarioDTO>> findAll(){
+        return ResponseEntity.ok().body(service.findAll());
     }
 }
