@@ -4,6 +4,7 @@ import com.ricardo.helpdesk.domain.Usuario;
 import com.ricardo.helpdesk.domain.dto.UsuarioDTO;
 import com.ricardo.helpdesk.repositories.UsuarioRepository;
 import com.ricardo.helpdesk.services.UserService;
+import com.ricardo.helpdesk.services.exceptions.DataIntegratyViolationException;
 import com.ricardo.helpdesk.services.exceptions.ObjectNotFoundException;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,9 +37,16 @@ public class UserServiceImpl implements UserService {
     }
 
     public UsuarioDTO create(UsuarioDTO obj) {
+        findByEmail(obj);
         Usuario novoUsuario = mapper.map(obj, Usuario.class);
-        UsuarioDTO novoUsuarioDto = mapper.map(repo.save(novoUsuario), UsuarioDTO.class);
 
-        return novoUsuarioDto;
+        return mapper.map(repo.save(novoUsuario), UsuarioDTO.class);
+    }
+
+    private void findByEmail(UsuarioDTO obj) {
+        Optional<Usuario> usuario = repo.findByEmail(obj.getEmail());
+
+        if(usuario.isPresent())
+            throw new DataIntegratyViolationException("E-mail já cadastrado no sistema");
     }
 }
